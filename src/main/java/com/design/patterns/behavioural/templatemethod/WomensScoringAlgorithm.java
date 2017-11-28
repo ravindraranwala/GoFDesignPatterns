@@ -1,6 +1,7 @@
-package com.gof.design.patterns.template.method;
+package com.design.patterns.behavioural.templatemethod;
 
-public class MensScoringAlgorithm extends ScoringAlgorithm {
+public class WomensScoringAlgorithm extends ScoringAlgorithm {
+
 	@Override
 	public int calculateBaseScore(int hits) {
 		return hits * 100;
@@ -8,7 +9,7 @@ public class MensScoringAlgorithm extends ScoringAlgorithm {
 
 	@Override
 	public int calculateReduction(int seconds) {
-		return seconds * 5;
+		return 4 * seconds;
 	}
 
 	@Override

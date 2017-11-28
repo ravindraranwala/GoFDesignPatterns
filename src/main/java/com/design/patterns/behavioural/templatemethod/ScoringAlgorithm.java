@@ -1,4 +1,4 @@
-package com.gof.design.patterns.template.method;
+package com.design.patterns.behavioural.templatemethod;
 
 public abstract class ScoringAlgorithm {
 	public int generateScore(int hits, int seconds) {
