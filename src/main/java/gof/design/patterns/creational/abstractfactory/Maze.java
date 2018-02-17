@@ -15,4 +15,13 @@ public class Maze {
 	public void addRoom(final Room room) {
 		this.rooms.add(room);
 	}
+
+	public boolean roomExist(final int roomNumber) {
+		return this.rooms.stream().filter(room -> room.getNumber() == roomNumber).count() >= 1;
+	}
+
+	public Room getRoomByNumber(int roomNumber) {
+		return this.rooms.stream().filter(room -> room.getNumber() == roomNumber).findFirst()
+				.orElseThrow(NullPointerException::new);
+	}
 }
