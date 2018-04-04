@@ -11,6 +11,7 @@ public class TextShape implements Shape {
 
 	@Override
 	public void boundingBox(Point bottomLeft, Point topRight) {
+		System.out.println("Drawing a Text Shape.");
 		System.out.println("Bottom: " + bottomLeft.getY() + " Left: " + bottomLeft.getX() + " Width: "
 				+ (topRight.getX() - bottomLeft.getX()) + " Height: " + (topRight.getY() - bottomLeft.getY()));
 		// Notice: The Delegation.
