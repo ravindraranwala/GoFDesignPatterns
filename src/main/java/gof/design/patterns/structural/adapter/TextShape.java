@@ -1,4 +1,4 @@
-package gof.design.patterns.structural;
+package gof.design.patterns.structural.adapter;
 
 // Object Adapter
 public class TextShape implements Shape {

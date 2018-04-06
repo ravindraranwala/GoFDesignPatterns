@@ -1,4 +1,4 @@
-package gof.design.patterns.structural;
+package gof.design.patterns.structural.adapter;
 
 public class TextManipulator implements Manipulator {
 	private final Shape shape;

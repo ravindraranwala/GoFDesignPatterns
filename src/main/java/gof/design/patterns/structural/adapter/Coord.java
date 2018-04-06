@@ -1,4 +1,4 @@
-package gof.design.patterns.structural;
+package gof.design.patterns.structural.adapter;
 
 public class Coord {
 	private final int value;

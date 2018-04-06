@@ -1,4 +1,4 @@
-package gof.design.patterns.structural;
+package gof.design.patterns.structural.adapter;
 
 // Adaptee, presumably coming from a Toolkit.
 public class TextView {
