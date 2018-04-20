@@ -1,4 +1,4 @@
-package gof.design.patterns.behavioral;
+package gof.design.patterns.behavioral.chainofresponsibility;
 
 public class Widget extends HelpHandler {
 	private final HelpHandler parent;
