@@ -18,7 +18,7 @@ public class VariableExp implements BooleanExp {
 		if (this.name.equals(varName)) {
 			return expr.copy();
 		}
-		return this;
+		return new VariableExp(this.name);
 	}
 
 	@Override
