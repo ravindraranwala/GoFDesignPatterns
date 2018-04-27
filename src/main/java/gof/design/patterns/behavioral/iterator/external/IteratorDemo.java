@@ -22,6 +22,7 @@ public class IteratorDemo {
 	}
 
 	private static void printEmployees(Iterator<Employee> it) {
+		// external iterator example code.
 		for (it.first(); !it.isDone(); it.next()) {
 			it.currentItem().print();
 		}
