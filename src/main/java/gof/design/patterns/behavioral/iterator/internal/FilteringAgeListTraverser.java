@@ -3,15 +3,15 @@ package gof.design.patterns.behavioral.iterator.internal;
 import gof.design.patterns.behavioral.iterator.external.AbstractList;
 import gof.design.patterns.behavioral.iterator.external.Employee;
 
-public class FilteringNameLengthListTraverser extends FilteringListTraverser<Employee> {
-	public FilteringNameLengthListTraverser(AbstractList<Employee> list) {
+public class FilteringAgeListTraverser extends FilteringListTraverser<Employee> {
+	public FilteringAgeListTraverser(AbstractList<Employee> list) {
 		super(list);
 	}
 
 	@Override
 	protected boolean testItem(Employee item) {
-		// Filters out names with character length < 5
-		return item.getName().length() >= 5;
+		// Filters out employees whose age is < 30.
+		return item.getAge() >= 30;
 	}
 
 	@Override

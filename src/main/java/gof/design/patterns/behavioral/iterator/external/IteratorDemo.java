@@ -1,7 +1,7 @@
 package gof.design.patterns.behavioral.iterator.external;
 
 import gof.design.patterns.behavioral.iterator.internal.FilteringListTraverser;
-import gof.design.patterns.behavioral.iterator.internal.FilteringNameLengthListTraverser;
+import gof.design.patterns.behavioral.iterator.internal.FilteringAgeListTraverser;
 import gof.design.patterns.behavioral.iterator.internal.PrintNEmployees;
 
 public class IteratorDemo {
@@ -9,7 +9,7 @@ public class IteratorDemo {
 	public static void main(String[] args) {
 		AbstractList<Employee> employees = new List<>(2, Employee.class);
 		employees.add(new Employee("Bryan", 34));
-		employees.add(new Employee("Mark", 32));
+		employees.add(new Employee("Mark", 28));
 		printEmployees(employees.createIterator());
 		
 		// internal iterator example code.
@@ -17,7 +17,7 @@ public class IteratorDemo {
 		printNEmployees.traverse();
 		
 		// internal iterator based on filter condition.
-		FilteringListTraverser<Employee> filteringTraverser = new FilteringNameLengthListTraverser(employees);
+		FilteringListTraverser<Employee> filteringTraverser = new FilteringAgeListTraverser(employees);
 		filteringTraverser.traverse();
 	}
 
