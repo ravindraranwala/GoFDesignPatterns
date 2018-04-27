@@ -13,6 +13,7 @@ public abstract class FilteringListTraverser<S> extends ListTraverser<S> {
 
 	@Override
 	public boolean traverse() {
+		// This is a template method.
 		boolean result = false;
 		for (iterator.first(); !iterator.isDone(); iterator.next()) {
 			if (this.testItem(iterator.currentItem())) {
