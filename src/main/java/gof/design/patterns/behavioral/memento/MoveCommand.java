@@ -4,14 +4,14 @@ import gof.design.patterns.structural.adapter.Point;
 
 //Notice this is the Caretaker object.
 public class MoveCommand implements Command {
-	private final Point delta;
 	private final Graphic target;
+	private final Point delta;
 	private ConstraintSolverMemento state;
 
-	public MoveCommand(Point delta, Graphic target) {
+	public MoveCommand(Graphic target, Point delta) {
 		super();
-		this.delta = delta;
 		this.target = target;
+		this.delta = delta;
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class MoveCommand implements Command {
 	@Override
 	public void unexecute() {
 		final ConstraintSolver solver = ConstraintSolver.getInstance();
-		// Move towards the opposite direction.
+		// Moves the graphic back.
 		target.move(new Point(-this.delta.getX(), -this.delta.getY()));
 		// restore solver state
 		solver.setMemento(this.state);
