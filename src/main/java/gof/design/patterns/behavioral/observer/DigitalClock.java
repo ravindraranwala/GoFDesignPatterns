@@ -10,7 +10,7 @@ public class DigitalClock implements Widget, Observer {
 	}
 
 	@Override
-	public void Update(Subject theChangedSubject) {
+	public void update(Subject theChangedSubject) {
 		// overrides Observer operation
 		if (this.subject == theChangedSubject) {
 			this.draw();

@@ -10,7 +10,7 @@ public class AnalogClock implements Widget, Observer {
 	}
 
 	@Override
-	public void Update(Subject theChangedSubject) {
+	public void update(Subject theChangedSubject) {
 		// overrides Observer operation
 		if (this.subject == theChangedSubject) {
 			this.draw();
@@ -25,7 +25,7 @@ public class AnalogClock implements Widget, Observer {
 		final int hour = this.subject.getHour();
 		final int minute = this.subject.getMinute();
 		final int second = this.subject.getSecond();
-		// draw the digital clock
+		// draw the Analog clock
 		System.out.println("Analog Clock -> H: " + hour + " M: " + minute + " S: " + second);
 	}
 
