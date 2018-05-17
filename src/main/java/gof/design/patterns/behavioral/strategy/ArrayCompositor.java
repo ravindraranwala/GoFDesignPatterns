@@ -2,10 +2,10 @@ package gof.design.patterns.behavioral.strategy;
 
 import gof.design.patterns.structural.adapter.Coord;
 
-public class ArrayComposito implements Compositor {
+public class ArrayCompositor implements Compositor {
 	private final int interval;
 
-	public ArrayComposito(int interval) {
+	public ArrayCompositor(int interval) {
 		super();
 		this.interval = interval;
 	}
