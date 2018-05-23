@@ -8,4 +8,5 @@ public interface EquipmentVisitor {
 	void visitChassis(Chassis chassis);
 
 	void visitBus(Bus bus);
+	// and so on for other concrete subclasses of Equipment
 }
