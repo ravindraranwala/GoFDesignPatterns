@@ -7,12 +7,12 @@ public class Chassis extends CompositeEquipment {
 	}
 
 	@Override
-	public Currency netPrice() {
+	public double netPrice() {
 		/*
 		 * Notice we have to add the price of chassis to the total cost of child
 		 * equipments here.
 		 */
-		return new Currency(super.netPrice().getValue() + 34.2, CurrencyTypes.USD);
+		return super.netPrice() + 34.2;
 	}
 
 }

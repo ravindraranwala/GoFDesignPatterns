@@ -14,7 +14,7 @@ public class Inventory {
 
 	@Override
 	public String toString() {
-		final Map<?, Long> inventoryDetails = equipments.stream()
+		final Map<String, Long> inventoryDetails = equipments.stream()
 				.collect(Collectors.groupingBy(Equipment::getName, Collectors.counting()));
 		return inventoryDetails.toString();
 	}

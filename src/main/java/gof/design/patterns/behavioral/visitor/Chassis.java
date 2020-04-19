@@ -1,8 +1,5 @@
 package gof.design.patterns.behavioral.visitor;
 
-import gof.design.patterns.structural.composite.Currency;
-import gof.design.patterns.structural.composite.CurrencyTypes;
-
 public class Chassis extends CompositeEquipment {
 	private final double discountPercentage;
 
@@ -12,19 +9,21 @@ public class Chassis extends CompositeEquipment {
 	}
 
 	@Override
-	public Currency netPrice() {
-		return new Currency(34.2, CurrencyTypes.USD);
+	public double netPrice() {
+		return 34.2;
 	}
 
 	@Override
-	public Currency discountPrice() {
+	public double discountPrice() {
 		final double discountPrice = 34.2 * (100 - this.discountPercentage) / 100;
-		return new Currency(discountPrice, CurrencyTypes.USD);
+		return discountPrice;
 	}
 
 	@Override
 	public void accept(EquipmentVisitor visitor) {
-		this.equipments.forEach(equipment -> equipment.accept(visitor));
+		for (Equipment equipment : equipments)
+			equipment.accept(visitor);
+		
 		visitor.visitChassis(this);
 	}
 

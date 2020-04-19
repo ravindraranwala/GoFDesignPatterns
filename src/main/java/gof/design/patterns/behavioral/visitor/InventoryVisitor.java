@@ -26,5 +26,4 @@ public class InventoryVisitor implements EquipmentVisitor {
 	public Inventory getInventory() {
 		return this.inventory;
 	}
-
 }

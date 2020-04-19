@@ -1,10 +1,5 @@
 package gof.design.patterns.behavioral.visitor;
 
-import gof.design.patterns.structural.composite.Currency;
-import gof.design.patterns.structural.composite.CurrencyTypes;
-import gof.design.patterns.structural.composite.PowerUnits;
-import gof.design.patterns.structural.composite.Watt;
-
 public class Card extends Equipment {
 
 	public Card(String name) {
@@ -12,13 +7,13 @@ public class Card extends Equipment {
 	}
 
 	@Override
-	public Currency netPrice() {
-		return new Currency(4.2, CurrencyTypes.USD);
+	public double netPrice() {
+		return 4.2;
 	}
 
 	@Override
-	public Watt power() {
-		return new Watt(1.6, PowerUnits.WATT);
+	public double power() {
+		return 1.6;
 	}
 
 	@Override

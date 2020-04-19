@@ -9,24 +9,15 @@ public class Equipment {
 		this.name = name;
 	}
 
-	public Currency netPrice() {
-		return new Currency(0.0, CurrencyTypes.USD);
+	public double netPrice() {
+		return 0.0;
 	}
 
-	public Watt power() {
-		return new Watt(0.0, PowerUnits.WATT);
+	public double power() {
+		return 0.0;
 	}
 
-	public void add(Equipment equipment) {
-		throw new UnsupportedOperationException();
-	}
-
-	public void remove(Equipment equipment) {
-		throw new UnsupportedOperationException();
-	}
-
-	public String getName() {
+	public String name() {
 		return name;
 	}
-
 }
