@@ -18,7 +18,7 @@ public class InterpreterDemo {
 		context.assign(z, true);
 
 		System.out.println(
-				"After the replacement of Y from Z, your expression evaluates to: " + replacement.evaluate(context));
+				"After the replacement of Y from not_Z, your expression evaluates to: " + replacement.evaluate(context));
 	}
 
 }

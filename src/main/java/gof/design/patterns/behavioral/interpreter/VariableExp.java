@@ -1,7 +1,12 @@
 package gof.design.patterns.behavioral.interpreter;
 
+/**
+ * Terminal expression.
+ * @author ravindra
+ *
+ */
 public class VariableExp implements BooleanExp {
-	private final String name;
+	final String name;
 
 	public VariableExp(String name) {
 		super();
@@ -25,9 +30,4 @@ public class VariableExp implements BooleanExp {
 	public BooleanExp copy() {
 		return new VariableExp(this.name);
 	}
-
-	public String getName() {
-		return name;
-	}
-
 }

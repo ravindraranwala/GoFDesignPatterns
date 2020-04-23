@@ -11,7 +11,6 @@ public class Context {
 	}
 
 	void assign(VariableExp expr, boolean val) {
-		this.varToBoolVal.put(expr.getName(), val);
+		this.varToBoolVal.put(expr.name, val);
 	}
-
 }

@@ -3,9 +3,8 @@ package gof.design.patterns.behavioral.interpreter;
 public class NotExp implements BooleanExp {
 	private final BooleanExp operand;
 
-	public NotExp(BooleanExp operand) {
-		super();
-		this.operand = operand;
+	public NotExp(BooleanExp op) {
+		this.operand = op;
 	}
 
 	@Override
@@ -22,5 +21,4 @@ public class NotExp implements BooleanExp {
 	public BooleanExp copy() {
 		return new NotExp(this.operand.copy());
 	}
-
 }

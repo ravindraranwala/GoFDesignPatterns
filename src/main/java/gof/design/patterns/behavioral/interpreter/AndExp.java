@@ -4,10 +4,9 @@ public class AndExp implements BooleanExp {
 	private final BooleanExp operand1;
 	private final BooleanExp operand2;
 
-	public AndExp(BooleanExp operand1, BooleanExp operand2) {
-		super();
-		this.operand1 = operand1;
-		this.operand2 = operand2;
+	public AndExp(BooleanExp op1, BooleanExp op2) {
+		this.operand1 = op1;
+		this.operand2 = op2;
 	}
 
 	@Override

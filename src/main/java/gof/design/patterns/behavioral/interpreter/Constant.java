@@ -1,10 +1,15 @@
 package gof.design.patterns.behavioral.interpreter;
 
+/**
+ * Terminal expression
+ * 
+ * @author ravindra
+ *
+ */
 public class Constant implements BooleanExp {
 	private final boolean value;
 
 	public Constant(boolean value) {
-		super();
 		this.value = value;
 	}
 
@@ -22,5 +27,4 @@ public class Constant implements BooleanExp {
 	public BooleanExp copy() {
 		return this;
 	}
-
 }
