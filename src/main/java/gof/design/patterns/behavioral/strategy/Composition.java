@@ -8,19 +8,16 @@ import gof.design.patterns.structural.adapter.Coord;
 public class Composition {
 	private final Compositor compositor;
 	// the list of components
-	private List<Component> components = new ArrayList<>();
-	// the number of lines
-	private int lineCount = 10;
+	private Component[] components = new Component[2];
 	// the Composition's line width
 	private int lineWidth = 100;
 	// the position of linebreaks in components
 	private int[] lineBreaks;
 
 	public Composition(Compositor compositor) {
-		super();
 		this.compositor = compositor;
-		this.components.add(new TextComponent());
-		this.components.add(new GraphicComponent());
+		components[0] = new TextComponent();
+		components[1] = new GraphicComponent();
 	}
 
 	public void repair() {
@@ -32,10 +29,10 @@ public class Composition {
 		System.out.println("prepare the arrays with the desired component sizes");
 		// determine where the breaks are:
 		System.out.println("determine where the breaks are:");
-		int breakCount = this.compositor.compose(natural, stretchability, shrinkability, components.size(), lineWidth,
-				lineBreaks);
+		final int breakCount = this.compositor.compose(natural, stretchability, shrinkability, components.length,
+				lineWidth, lineBreaks);
 
-		// lay out components according to breaks
-		System.out.println("lay out components according to breaks");
+		// layout components according to breaks
+		System.out.println("layout components according to breaks");
 	}
 }

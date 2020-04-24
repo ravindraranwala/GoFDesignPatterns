@@ -13,7 +13,8 @@ public class ArrayCompositor implements Compositor {
 	@Override
 	public int compose(Coord[] natural, Coord[] stretch, Coord[] shrink, int componentCount, int lineWidth,
 			int[] breaks) {
-		System.out.println("ArrayCompositor breaks the components into lines at regular intervals");
+		System.out.println(
+				String.format("ArrayCompositor breaks the components into lines at regular intervals %d", interval));
 		return 0;
 	}
 
