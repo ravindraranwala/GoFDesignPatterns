@@ -1,11 +1,10 @@
 package gof.design.patterns.behavioral.observer;
 
-public class DigitalClock implements Widget, Observer {
+final class DigitalClock implements Widget, Observer {
 	private final ClockTimer subject;
 
-	public DigitalClock(ClockTimer subject) {
-		super();
-		this.subject = subject;
+	public DigitalClock(ClockTimer s) {
+		this.subject = s;
 		this.subject.attach(this);
 	}
 
@@ -22,9 +21,9 @@ public class DigitalClock implements Widget, Observer {
 		// overrides Widget operation
 		// defines how to draw the digital clock
 		// get the new values from the subject
-		final int hour = this.subject.getHour();
-		final int minute = this.subject.getMinute();
-		final int second = this.subject.getSecond();
+		final int hour = subject.getHour();
+		final int minute = subject.getMinute();
+		final int second = subject.getSecond();
 		// draw the digital clock
 		System.out.println("Digital Clock -> H: " + hour + " M: " + minute + " S: " + second);
 	}

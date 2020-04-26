@@ -1,11 +1,10 @@
 package gof.design.patterns.behavioral.observer;
 
-public class AnalogClock implements Widget, Observer {
+final class AnalogClock implements Widget, Observer {
 	private final ClockTimer subject;
 
-	public AnalogClock(ClockTimer subject) {
-		super();
-		this.subject = subject;
+	public AnalogClock(ClockTimer s) {
+		this.subject = s;
 		this.subject.attach(this);
 	}
 

@@ -1,16 +1,17 @@
 package gof.design.patterns.behavioral.observer;
 
 import java.time.LocalTime;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
-public class ClockTimer extends Subject {
+class ClockTimer extends Subject {
 	private int hour;
 	private int minute;
 	private int second;
+	private ScheduledExecutorService exec = new ScheduledThreadPoolExecutor(1);
 
 	public ClockTimer() {
-		super();
 		this.startTimer();
 	}
 
@@ -37,12 +38,6 @@ public class ClockTimer extends Subject {
 	}
 
 	private void startTimer() {
-		final Timer timer = new Timer();
-		timer.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				tick();
-			}
-		}, 0, 1000);
+		exec.scheduleAtFixedRate(() -> tick(), 0, 1, TimeUnit.SECONDS);
 	}
 }

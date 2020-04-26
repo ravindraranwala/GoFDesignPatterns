@@ -1,5 +1,5 @@
 package gof.design.patterns.behavioral.observer;
 
-public interface Observer {
+interface Observer {
 	void update(Subject theChangedSubject);
 }
