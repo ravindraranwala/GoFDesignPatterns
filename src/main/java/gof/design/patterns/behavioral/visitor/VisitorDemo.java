@@ -9,10 +9,13 @@ public class VisitorDemo {
 
 		chassis.add(bus);
 		chassis.add(new FloppyDisk("3.5in Floppy"));
-		final InventoryVisitor visitor = new InventoryVisitor();
-		// final PricingVisitor visitor = new PricingVisitor();
-		chassis.accept(visitor);
-		System.out.println("Inventory " + chassis.getName() + visitor.getInventory());
+		final InventoryVisitor inventoryVisitor = new InventoryVisitor();
+		chassis.accept(inventoryVisitor);
+		System.out.println("Inventory " + chassis.getName() + inventoryVisitor.getInventory());
+		
+		final PricingVisitor pricingVisitor = new PricingVisitor();
+		chassis.accept(pricingVisitor);
+		System.out.println(String.format("Total price is: %f", pricingVisitor.getTotalPrice()));
 	}
 
 }

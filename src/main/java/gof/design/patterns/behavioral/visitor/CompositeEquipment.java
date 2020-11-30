@@ -8,7 +8,7 @@ public abstract class CompositeEquipment extends Equipment {
 	protected final Collection<Equipment> equipments;
 	protected final double discountPercentage;
 
-	public CompositeEquipment(String name, double discountPercentage) {
+	protected CompositeEquipment(String name, double discountPercentage) {
 		super(name);
 		this.equipments = new ArrayList<>();
 		this.discountPercentage = discountPercentage;

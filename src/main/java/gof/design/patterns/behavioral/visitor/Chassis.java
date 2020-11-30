@@ -1,11 +1,9 @@
 package gof.design.patterns.behavioral.visitor;
 
 public class Chassis extends CompositeEquipment {
-	private final double discountPercentage;
 
 	public Chassis(String name, double discountPercentage) {
-		super(name, 10);
-		this.discountPercentage = discountPercentage;
+		super(name, discountPercentage);
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package gof.design.patterns.behavioral.visitor;
 public abstract class Equipment {
 	private final String name;
 
-	public Equipment(String name) {
+	protected Equipment(String name) {
 		super();
 		this.name = name;
 	}
