@@ -6,13 +6,8 @@ package gof.design.patterns.behavioral.interpreter;
  * @author ravindra
  *
  */
-public class Constant implements BooleanExp {
-	private final boolean value;
-
-	public Constant(boolean value) {
-		this.value = value;
-	}
-
+public enum BoolConstant implements BooleanExp {
+	TRUE(true), FALSE(false);
 	@Override
 	public boolean evaluate(Context context) {
 		return this.value;
@@ -26,5 +21,11 @@ public class Constant implements BooleanExp {
 	@Override
 	public BooleanExp copy() {
 		return this;
+	}
+
+	private final boolean value;
+
+	BoolConstant(boolean value) {
+		this.value = value;
 	}
 }

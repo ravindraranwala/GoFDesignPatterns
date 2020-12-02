@@ -9,7 +9,6 @@ public class VariableExp implements BooleanExp {
 	final String name;
 
 	public VariableExp(String name) {
-		super();
 		this.name = name;
 	}
 
