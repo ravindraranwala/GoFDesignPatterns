@@ -6,7 +6,6 @@ public class ArrayCompositor implements Compositor {
 	private final int interval;
 
 	public ArrayCompositor(int interval) {
-		super();
 		this.interval = interval;
 	}
 

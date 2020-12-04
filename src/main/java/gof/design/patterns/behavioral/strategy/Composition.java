@@ -1,8 +1,5 @@
 package gof.design.patterns.behavioral.strategy;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import gof.design.patterns.structural.adapter.Coord;
 
 public class Composition {
