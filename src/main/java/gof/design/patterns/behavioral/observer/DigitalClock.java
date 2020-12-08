@@ -25,7 +25,7 @@ final class DigitalClock implements Widget, Observer {
 		final int minute = subject.getMinute();
 		final int second = subject.getSecond();
 		// draw the digital clock
-		System.out.println("Digital Clock -> H: " + hour + " M: " + minute + " S: " + second);
+		System.out.println(String.format("Digital Clock -> H: %d M: %d S: %d", hour, minute, second));
 	}
 
 }

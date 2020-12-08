@@ -25,7 +25,7 @@ final class AnalogClock implements Widget, Observer {
 		final int minute = this.subject.getMinute();
 		final int second = this.subject.getSecond();
 		// draw the Analog clock
-		System.out.println("Analog Clock -> H: " + hour + " M: " + minute + " S: " + second);
+		System.out.println(String.format("Analog Clock -> H: %d M: %d S: %d", hour, minute, second));
 	}
 
 }
